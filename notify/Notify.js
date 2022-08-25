@@ -29,6 +29,8 @@
         How to use?
 
         Samples
+
+        HTML
             <div class="btn {success}" type="{success}">
                 Create success
             </div>
@@ -41,35 +43,37 @@
             <div class="btn {warning}" type="{warning}">
                 Create warning
             </div>
-            <div class="btn">
+            <div class="btn" type="default">
                 Create default
             </div>
 
-        let btn = document.querySelector('.btn');
-        let ms = 1500;
-        Without settings
-        let notification = new Notify();
+        JavaScript
 
-        With settings
-        let notification = new Notify({
-            notifyContainer: {
-                'background': 'yellow',
-                'position': 'fixed',
-                'right': 0,
-                'padding-right': 20,
-                'margin': 10,
-                'width': 300
-            }
-        });
+            let btn = document.querySelector('.btn');
+            let ms = 1500;
+            Without settings
+            let notification = new Notify();
 
-        btn.addEventListener('click', function (){
-            let notifyDiv = document.querySelector('.notify')
-            notification.new("Hello World", ms, btn.getAttribute('type'))
-            ms += 1000;
-            setTimeout(() => {
-                ms = 1000;
-            }, ms)
-        })
+            With settings
+            let notification = new Notify({
+                notifyContainer: {
+                    'background': 'yellow',
+                    'position': 'fixed',
+                    'right': 0,
+                    'padding-right': 20,
+                    'margin': 10,
+                    'width': 300
+                }
+            });
+
+            btn.addEventListener('click', function (){
+                let notifyDiv = document.querySelector('.notify')
+                notification.new("Hello World", ms, btn.getAttribute('type'), params = {})
+                ms += 1000;
+                setTimeout(() => {
+                    ms = 1000;
+                }, ms)
+            })
 */
 
 class Notify {
