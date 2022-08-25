@@ -1,2 +1,2 @@
 # helper
-Addmimg more js helpers
+Adding more js helpers
