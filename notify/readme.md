@@ -1,9 +1,6 @@
 class Notify;
-
 Author: Remetulla DamiR;
-
 mail: remetulla@gmail.com;
-
 Description:
     Notify({bodyContainer: {settings}})
 
