@@ -15,8 +15,12 @@
             Main function creating block with custom css;
             if you add css params then write original css parameters;
         }
-        First enabling this class after auto appending after on body div block with class="notify";
-        Create a new nofifyBlock add new() function;
+        setting() => {
+            Custom CSS for notifyContainer
+        }
+
+        First when enabling this class, auto appending on body div block with class="notify";
+        Create a new notifyBlock add new() function;
 
         ms is timeout or click to close;
 
