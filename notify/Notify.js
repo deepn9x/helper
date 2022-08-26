@@ -3,7 +3,7 @@
     Author: Remetulla DamiR;
     mail: remetulla@gmail.com;
     Description:
-        Notify({bodyContainer: {settings}})
+        Notify({notifyContainer: {settings}})
 
         create() => {
             returning div block;
@@ -85,6 +85,9 @@ class Notify {
     }
     new(message, ms, type = null, params = false) {
         let notifyBlock = document.querySelector('.notify')
+        if(typeof type != 'string'){
+            type = type.getAttribute('type')
+        }
         if (typeof params == 'object') {
             this.create(type, notifyBlock, ms, params).textContent = message;
         } else {
@@ -105,6 +108,7 @@ class Notify {
         })
     }
     create(type, parentDocument, ms, params) {
+        console.log("CREATE", type)
         let div = document.createElement('div');
         div.classList.add('notifyBlock');
         div.classList.add(type);
